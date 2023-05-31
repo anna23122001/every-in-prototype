@@ -7,6 +7,14 @@ function MyArray(...args) {
  }
  MyArray.prototype = new MyArrayProto();
  function MyArrayProto(){
+    this.push = function(...args){
+        if(args.length > 0){
+            for( let i = 0; i < args.length; i++){
+                this[this.length++] = args[i];
+            }
+        }
+        return this.length;
+    };
     this.every = function(fn){
         if(this.length === 0){
             return true;
@@ -20,7 +28,7 @@ function MyArray(...args) {
     } 
  }
    
-const myArray = [20, 40, 60, 'ff'];
+const myArray = [20, 40, 60];
 console.log(myArray.every(el => el % 2 === 0))
 const myArray2 = [3, 4, 6, 12];
 console.log(myArray2.every(el => el % 2 === 0))

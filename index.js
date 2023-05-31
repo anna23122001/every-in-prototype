@@ -2,7 +2,7 @@
 function MyArray(...args) {
     this.length = 0;
     for(let i = 0; i< args.length; i++){
-        this.every(args[i]);
+        this.push(args[i]);
     }
  }
  MyArray.prototype = new MyArrayProto();
@@ -16,7 +16,6 @@ function MyArray(...args) {
                 return true;
             }
         }
-        return false
     } 
  }
    

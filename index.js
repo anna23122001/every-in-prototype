@@ -28,7 +28,7 @@ function MyArray(...args) {
     } 
  }
    
-const myArray = [20, 40, 60];
-console.log(myArray.every(el => el % 2 === 0))
-const myArray2 = [3, 4, 6, 12];
-console.log(myArray2.every(el => el % 2 === 0))
+const newArray = new MyArray(20, 40, 60);
+console.log(newArray.every(el => el % 2 === 0))
+const newArray2 = new MyArray(3, 40, 60);
+console.log(newArray2.every(el => el % 2 === 0))
